@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root{
+    --main-color:#FFAF00;
+    --black:#000;
+    --dark-gray:#333;
+    --white:#FFF;
+    --light-grey:#EDEDED;
+    --light-color:#666;
+}
+
+*{
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .3s ease-in;
+}
+html{
+    font-size: 62.6%;
+    overflow-x: hidden;
+}
+.header{
+    position: sticky;
+    top: 0; left: 0; right:0;
+    z-index: 100;
+    background-color: var(--white);
+    padding: 2rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .logo{
+    color: var(--main-color);
+    font-size:2.5rem;
+    font-weight: 800;
+
+}
+.header .logo span{
+    color: var(--black);
+}
+.header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+.header .navbar a{
+    color: var(--dark-gray);
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 1rem;
+}
+.header .navbar a:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.header .btn{
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    border-radius: 5rem;
+    box-shadow: .1rem .5rem 1rem #999;
+}
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.header .icons{
+    display: none;
+}
+.header .icons i{
+    font-size: 3rem;
+    color: var(--main-color);
+    cursor: pointer;
+  
+}
+.home{
+    background: url(../images/home_bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 90vh;
+    border-radius: 3rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.home .content{
+    padding: 3rem;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}
+.home .content span{
+    font-size: 2.5rem;
+    color:var(--dark-gray);
+    text-transform: uppercase;
+}
+.home .content h1{
+    font-size: 6rem;
+    color: var(--white);
+    text-transform:capitalize;
+    text-shadow: .1rem .5rem 1rem  var(--dark-gray);
+    width: 60rem;
+}
+
+.home .content .flex-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+.home .content .flex-btn .btn{
+    background-color: var(--main-color);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+    box-shadow: .1rem .5rem 1rem var(--dark-gray);
+}
+.home .content .flex-btn .btn:hover{
+    background-color: var(--dark-gray);
+    border-radius: 0;
+}
+.home .content .flex-btn .video{
+    background-color: var(--dark-gray);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--white);
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    border: .1rem solid var(--white);
+    cursor: pointer;
+}
+.home .content .flex-btn .video:hover{
+    background-color: var(--main-color);
+    scale: 1.1;
+}
+
+.popular{
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+    padding: 7%;
+}
+.popular H2{
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+.popular p{
+    font-size: 1.4rem;
+    color: var(--light-color);
+    text-transform: lowercase;
+    margin-bottom: 3rem;
+}
+.popular .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+.popular .box-container .box{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    flex-flow: column;
+}
+.popular .box-container .box .image{
+    width: 30rem;
+    height: 18rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: .1rem .4rem 1rem #999;
+}
+.popular .box-container .box img:hover{
+    scale: 1.2;
+}
+.popular .box-container .box img{
+    height: 18rem;
+    width: 30rem;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+.popular .box-container .box .content h3{
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+.popular .box-container .box .content p{
+    font-size: 1.2rem;
+    color:var(--light-color);
+    text-transform: capitalize;
+}
+.popular .box-container .box .content p span{
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+}
+.services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 5%;
+    flex-flow: column;
+}
+.services h1{
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: capitalize;
+    text-align: center;
+}
+.services p{
+    font-size: 1.3rem;
+    color: var(--light-color);
+    margin-bottom: 10rem;
+}
+.services .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: start;
+    gap: 1rem;
+}
+.services .box-container .box{
+    width: 35rem;
+    background-color: #EEEEEE;
+    border-radius: 3rem;
+    position: relative;
+    padding: 1rem;
+    cursor: pointer;
+}
+.services .box-container .box i{
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    color: var(--main-color);
+    margin: 1rem;
+
+}
+.services .box-container .box h3{
+    font-size: 1.8rem;
+    color: var(--dark-gray);
+    text-transform: capitalize;
+    margin: 1rem;
+    margin-top: 5rem;
+}
+.services .box-container .box .hover-box{
+    background-color: var(--main-color);
+    padding: 2rem;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    width: 35rem;
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 27rem;
+    clip-path: polygon(100% 100%, 0 100%, 0 100%, 100% 100%);
+
+}
+.services .box-container .box:hover .hover-box{
+    clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0);
+
+}
+.services .box-container .box .hover-box i{
+    background-color: var(--white);
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    text-align: center;
+}
+.services .box-container .box .hover-box p{
+    color: var(--white);
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding:7%;
+}
+.about .content{
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+}
+.about .content h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.about .content p{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: var(--light-color);
+    line-height: 2;
+}
+.about .content .btn{
+    background-color: var(--main-color);
+    padding: 2rem;
+    text-align: center;
+    color: var(--white);
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    width: 100%;
+}
+.about .content .btn:hover{
+    background-color: var(--dark-gray);
+}
+.about .content .btn:hover i{
+    padding-left: 3rem;
+}
+
+.rating{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5%;
+}
+.rating .box{
+    background-color: #FFD18E;
+    padding: 2rem 5rem;
+    border-radius: 2rem;
+    width: 30rem;
+    cursor: pointer;
+    box-shadow: .1rem .5rem 1rem #999;
+}
+.rating .box h3{
+    font-size: 9rem;
+    color: var(--white);
+}
+.rating .box span{
+    font-size: 1.3rem;
+    color: var(--dark-gray);
+}
+.clients{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5%;
+    text-align: center;
+}
+.clients h1{
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    
+}
+.clients p{
+    font-size: 1.1rem;
+    color:var(--light-color);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    line-height: 2;
+    width: 60rem;
+}
+.clients .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+}
+.clients .box-container .box{
+    width: 35rem;
+    background-color: #EEEEEE;
+    border-radius: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+.clients .box-container .box:hover{
+    background-color: var(--main-color);
+}
+.clients .box-container .box .text{
+    background-color: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    padding: 1rem;
+}
+.clients .box-container .box .text .stars i{
+    font-size: 1.2rem;
+    color: var(--main-color);
+    margin: 1rem 0;
+}
+.clients .box-container .box .text p{
+    font-size: 1.2rem;
+    color:var(--dark-gray);
+    line-height: 1.5;
+    width: 100%;
+    text-align: left;
+}
+.clients .box-container .box .flex{
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+.clients .box-container .box .flex img{
+    height: 7rem;
+    width: 7rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.clients .box-container .box .flex .name{
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    gap: .5rem;
+}
+.clients .box-container .box .flex .name h3{
+    font-size: 1.3rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+.clients .box-container .box .flex .name span{
+    font-size: 1rem;
+    color:var(--dark-gray);
+    text-transform: capitalize;
+}
+.clients .box-container .box:hover .flex .name span{
+    color:#EEEEEE;
+}
+.clients .box-container .box:hover .flex .name h3{
+   color: var(--white);
+}
+.gallery{
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    padding: 5%;
+    gap: 2rem;
+}
+
+.gallery h1{
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+.gallery p{
+    font-size: 1.2rem;
+    color: var(--light-color);
+    text-transform: capitalize;
+}
+.gallery .box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 5rem 0;
+}
+.gallery .box img{
+    height: 35rem;
+    width: 45rem;
+    object-fit: cover;
+}
+.gallery .box img:hover{
+    cursor: pointer;
+    box-shadow: .1rem .5rem 1rem #999;
+    scale: 1.1;
+}
+.footer{
+    background-color: #EEEEEE;
+    padding: 5%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    padding: 2rem;
+}
+.footer .box-container .box{
+    width: 25rem;
+}
+.footer .box-container .box h3{
+    font-size: 1.9rem;
+    color: var(--black);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+.footer .box-container .box p{
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    width: 100%;
+}
+.footer .box-container .box .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+.footer .box-container .box .icons i{
+    color: var(--white);
+    background-color: var(--main-color);
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+.footer .box-container .box a{
+    display: grid;
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+.footer .box-container .box a:hover{
+    color: var(--main-color);
+}
+.footer .box-container .box p i{
+   
+    color: var(--main-color);
+    padding: 1rem;
+    font-size: 2rem;
+}
+.footer .box-container .box input{
+    background-color: var(--white);
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+}
+.footer .box-container .box .btn{
+    background-color: var(--black);
+    color: var(--white);
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.footer .box-container .box .btn:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+.footer .credit{
+    padding-top: 5rem;
+    text-align: center;
+
+}
+.footer .credit p{
+    font-size: 1.3rem;
+    color: var(--dark-gray);
+    text-transform: capitalize;
+}
+.footer .credit p i,
+.footer .credit p span
+{
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+    html{
+        font-size: 55.5%;
+    }
+}
+
+@media(max-width:830px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        position: relative;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        align-items:center;
+        justify-content: center;
+        padding: 2rem;
+        gap: 2rem;
+        display: grid;
+        clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+
+    }
+    .header .navbar.show{
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+    .header .icons{
+        display: inline;
+    }
+    .header .icons .fa-xmark{
+        display: none;
+    }
+    .header .icons .fa-xmark.show{
+        display: inline;
+    }
+    .header .icons .fa-bars.hide{
+        display: none;
+    }
+    .gallery .box img{
+        height: 25rem;
+        width: 30rem;
+        object-fit: cover;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .home .content h1{
+        font-size: 5rem;
+        width: 100%;
+    }
+    .home .content h1 span{ 
+        font-size: 5rem;
+    }
+    .popular .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .popular .box-container .box .image{
+        width: 35rem;
+        height: 20rem;
+    }
+    .popular .box-container .box .image img{
+        width: 35rem;
+        height: 20rem;
+    }
+    .services .box-container{
+        gap: 8rem;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about{
+        display: flex;
+        flex-direction: column-reverse;
+     
+    }
+    .clients {
+        padding: 7rem 0;
+    }
+    .clients p{
+        width: 35rem;
+    }
+    .clients .box-container{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
